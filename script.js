@@ -1,6 +1,6 @@
 //your JS code here. If required.
 
-const container = document.getElementById("color-board");
+const container = document.querySelector("#color-board");
 const totalBoxes = 800;
 
 // Function to generate random color
