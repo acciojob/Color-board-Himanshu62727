@@ -14,8 +14,8 @@ function getRandomColor() {
 }
 
 // Create 800 boxes
-for (let i=0; i < totalBoxes; i++) {
-    const square = document.createElement('div');
+for (let i=0; i<totalBoxes; i++) {
+    const square = document.createElement("div");
     square.classList.add("square");
 
     // Hover effect to change background color
