@@ -1,1 +1,31 @@
 /*  your css code here. If applicable */
+/* Basic styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(40, 1fr); /* 40 columns in a row */
+    grid-gap: 2px;
+    width: 80%;
+    height: 80vh;
+}
+
+.square {
+    width: 100%;
+    padding-bottom: 100%; /* Ensures that boxes are square */
+    background-color: #fff;
+    transition: background-color 1s ease;
+    border: 1px solid #ddd;
+}
+
+/* Hover Effect */
+.square.hovered {
+    background-color: rgb(100, 200, 255);
+}
