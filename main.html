@@ -6,85 +6,9 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 
-	<style>
-
-		* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-}
-
-/* Container for the boxes */
-.container {
-    display: grid;
-    grid-template-columns: repeat(40, 20px); /* 40 columns */
-    grid-template-rows: repeat(20, 20px);    /* 20 rows */
-    gap: 2px;
-}
-
-/* Styling individual boxes */
-.square {
-    width: 20px;
-    height: 20px;
-    background-color: #ddd;
-    transition: background-color 1s ease;  /* Smooth transition on hover */
-}
-
-/* Hover effect */
-.square.hovered {
-    background-color: #3498db;
-}
-	</style>
-
 <body>
 	<!-- the entire body must be written by student -->
 	<div class="container" id="color-board"></div>
-    <script>
-		// Select the container where the boxes will be placed
-const container = document.getElementById('color-board');
-const totalBoxes = 800; // Total number of boxes
-
-// Function to generate random colors
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i=0; i<6; i++) {
-        color += letters[Math.floor(Math.random()*16)];
-    }
-    return color;
-}
-
-// Create 800 square divs
-for (let i=0; i<totalBoxes; i++) {
-    const square = document.createElement('div');
-    square.classList.add('square');
-    
-    // Add hover event listener to change color
-    square.addEventListener('mouseover', () => {
-        const randomColor = getRandomColor();
-        square.style.backgroundColor = randomColor;
-        square.classList.add('hovered');
-        
-        // Remove the color after 1 second
-        setTimeout(() => {
-            square.style.backgroundColor = '#ddd';
-            square.classList.remove('hovered');
-        }, 5000);
-    });
-    
-    // Append the square to the container
-    container.appendChild(square);
-}
-
-</script>
 
 </body>
 
