@@ -34,7 +34,7 @@ square.forEach((e) => {
         
         setTimeout(() => {
             e.style.backgroundColor = "";
-        }, 3000)
+        }, 4000)
     })
 })
 
