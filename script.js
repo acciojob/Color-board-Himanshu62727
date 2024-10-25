@@ -33,7 +33,7 @@ square.forEach((e) => {
         e.style.backgroundColor =  randomColor();
         
         setTimeout(() => {
-            e.style.backgroundColor = "#";
+            e.style.backgroundColor = "";
         }, 3000)
     })
 })
