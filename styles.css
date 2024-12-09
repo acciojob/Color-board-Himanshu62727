@@ -1,19 +1,19 @@
+.square {
+    height: 20px;
+    width: 20px;
+    background: rgb(29, 29, 29);
+}
+
 * {
     background-color: #1a032f;
     padding: 0;
     margin: 0;
 }
-
-.square {
-    height: 20px;
-    width: 20px;
-    background: black;
-}
-
 .container {
-    padding: 10px;
+    padding: 20px;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
+
 }

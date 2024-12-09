@@ -18,9 +18,13 @@
 // }
 
 
-let container = document.getElementsByClassName("container");
 
-for (let i = 0; i<800; i++) {
+let container = document.querySelectorAll(".container");
+// console.log(container);
+
+
+
+for (let i = 0; i < 800; i++) {
     let box = document.createElement("div");
     container[0].append(box);
     // box.style.cssText = "height: 20px; width: 20px;";
@@ -28,21 +32,21 @@ for (let i = 0; i<800; i++) {
 }
 let square = document.querySelectorAll(".square");
 
-square.forEach((e) => {
-    e.addEventListener("mouseover", () => {
-        e.style.backgroundColor =  randomColor();
+square.forEach((sq) => {
+    sq.addEventListener("mouseover", () => {
+        sq.style.backgroundColor =  randomColor();
         
         setTimeout(() => {
-            e.style.backgroundColor = "";
-        }, 4000)
+            sq.style.backgroundColor = '';
+        }, 1000)
     })
 })
 
 function randomColor() {
     let letters = '0123456789ABCDEF'
     let color = "#"
-    for (let i = 0; i<6; i++) {
-        color += letters[parseInt(Math.random()*16)]
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random()*16)]
     }
     return color
 }
